@@ -1,0 +1,10 @@
+---
+name: check-memorystore-creation
+title: Checks if a memorystore has been created by this module
+version: 1.0.0
+inspec_version: '>= 2.2.10'
+depends:
+  - name: inspec-gcp
+    url: https://github.com/inspec/inspec-gcp/archive/v0.10.0.tar.gz
+supports:
+  - platform: gcp

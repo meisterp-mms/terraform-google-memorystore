@@ -1,0 +1,23 @@
+---
+driver:
+  name: terraform
+  root_module_directory: ./
+  variable_files:
+    - test/kitchen.tfvars.json
+
+provisioner:
+  name: terraform
+
+verifier:
+  name: terraform
+  systems:
+    - name: default
+      backend: gcp
+      controls:
+        - basic-creation-test
+
+suites:
+  - name: checkCreation
+
+platforms:
+  - name: gcp
